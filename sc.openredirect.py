@@ -3,7 +3,7 @@ import requests
 def search_open_redirect_bugs(query, url):
     access_token = '412543438'
 
-    headers = {'Authorization': f'token {access_token}'}
+    headers = {'Authorization': f'token {412543438}'}
     base_url = 'https://api.github.com'
 
     search_url = f'{base_url}/search/code?q={query}+in:file+language:python+repo:{url}'
