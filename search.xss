@@ -2,7 +2,7 @@ import requests
 
 def search_xss_bugs(query):
     # Masukkan token akses GitHub Anda di sini
-    access_token = 'YOUR_ACCESS_TOKEN'
+    access_token = '412543438'
 
     headers = {'Authorization': f'token {access_token}'}
     base_url = 'https://api.github.com'
