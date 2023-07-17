@@ -1,18 +1,15 @@
 import requests
 
 def search_xss_bugs(query):
-    # Masukkan token akses GitHub Anda di sini
     access_token = '412543438'
 
     headers = {'Authorization': f'token {access_token}'}
     base_url = 'https://api.github.com'
 
-    # Membuat permintaan pencarian ke API GitHub
     search_url = f'{base_url}/search/code?q={query}+in:file+language:python'
     response = requests.get(search_url, headers=headers)
 
     if response.status_code == 200:
-        # Menampilkan hasil pencarian
         json_response = response.json()
         total_count = json_response['total_count']
         items = json_response['items']
