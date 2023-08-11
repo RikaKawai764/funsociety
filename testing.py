@@ -1,3 +1,10 @@
+# ==============================================================
+# Fun Society Security Scanner
+# Author: [HARIS]
+# Instagram: [@risss_min1_chemistry]
+# Description: This script performs security scans for common vulnerabilities.
+# ==============================================================
+
 import requests
 import re
 
