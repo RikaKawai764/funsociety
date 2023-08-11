@@ -1,15 +1,23 @@
-# ==============================================================
-# Fun Society Security Scanner
-# Author: [HARIS]
-# Instagram: [@risss_min1_chemistry]
-# Description: This script performs security scans for common vulnerabilities.
-# ==============================================================
+# ------------------------------------------------------------------------------------
+#|  ==============================================================================    |
+#| | Security Scanner                                                               | |
+#| | Author: HARIS                                                                  | |
+#| | Instagram: @risss_min1_chemistry                                               | | 
+#| |                                                                                | |
+#| | Description: This script performs security scans for common vulnerabilities!   | |
+#|  ==============================================================================    |
+# ------------------------------------------------------------------------------------
+
+"""Scanner"""
+
 
 import requests
 import re
 
 def scan_xss(url):
-    payload = "<script>alert('XSS!');</script>"
+    with open('payload_xss.txt') as payload_file:
+    payload_content = payload_file.read()
+    
     response = requests.post(url, data={"input_field": payload})
     if "XSS!" in response.text:
         print("XSS vulnerability found!")
